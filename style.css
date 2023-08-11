@@ -57,6 +57,7 @@ p {
 .main {
   max-width: 1000px;
   margin: 40px auto;
+  padding: 0 1rem;
 }
 
 .article + .article {
@@ -200,4 +201,25 @@ p {
 .form button:hover {
   background-color: var(--tertiary-color);
   color: #fff;
+}
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 570px) {
+	.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .article p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .form {
+    gap:5px;
+    display: flex;
+    flex-direction: column;
+  }
 }
